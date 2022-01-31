@@ -4,16 +4,18 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import {  YellowBox } from 'react-native-web';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
+import AddTodo from './components/AddTodo';
 
 export default function App() {
 
   // data
   const [todos, setTodos] = useState([
-  {text: 'Buy Coffee', key: '1'},
+  {text: 'Buy  Coffee', key: '1'},
   {text: 'Create an App', key: '2'},
   {text: 'Play on Switch', key: '3'}
 
   ]);
+
 
   // function for pressing list
   const pressHandler = (key) => {
@@ -21,12 +23,24 @@ export default function App() {
       return prevTodos.filter(todo => todo.key != key);
     });
   }
+
+ const submitHandler = (text) => {
+   setTodos((prevTodos) => {
+     return [
+       { text : text , key: Math.random().toString() },
+       ...prevTodos
+     ];
+   })
+ }
+
   return (
     <View style={styles.container}>
+    
     {/* Header */}
       <Header />
         <View style={styles.content}>
            {/* form */}
+           <AddTodo submitHandler={ submitHandler } />
           
               <View style={styles.list}>
               <FlatList
