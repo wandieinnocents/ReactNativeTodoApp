@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { ImageBackground, StyleSheet, Text, View, FlatList, Alert ,TouchableWithoutFeedback, Keyboard} from "react-native";
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Alert,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 import { YellowBox } from "react-native-web";
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
@@ -10,9 +19,11 @@ import Sandbox from "./components/Sandbox";
 export default function App() {
   // data
   const [todos, setTodos] = useState([
-    { text: "Buy  Coffee", key: "1" },
-    { text: "Create an App", key: "2" },
-    { text: "Play on Switch", key: "3" },
+    { text: "Read My Bible", key: "1" },
+    { text: "Workout 15 Mins", key: "2" },
+    { text: "Forex Trading", key: "3" },
+    { text: "Write Code", key: "4" },
+   
   ]);
 
   // function for pressing list
@@ -35,36 +46,30 @@ export default function App() {
     }
   };
 
-
-
   return (
-
-   
-   
     //  <Sandbox />
-    
-     
-    <TouchableWithoutFeedback onPress={() => {
-      Keyboard.dismiss();
-      console.log("Keyboard dismissed");
-    }}>
-    <View style={styles.container}>
-       
-      <Header />
-      <View style={styles.content}>
-        <AddTodo submitHandler={submitHandler} />
 
-        <View style={styles.list}>
-          <FlatList
-            data={todos}
-            renderItem={({ item }) => (
-              <TodoItem item={item} pressHandler={pressHandler} />
-            )}
-          />
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+        console.log("Keyboard dismissed");
+      }}
+    >
+      <View style={styles.container}>
+        <Header />
+        <View style={styles.content}>
+          <AddTodo submitHandler={submitHandler} />
+
+          <View style={styles.list}>
+            <FlatList
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem item={item} pressHandler={pressHandler} />
+              )}
+            />
+          </View>
         </View>
       </View>
-      
-    </View>
     </TouchableWithoutFeedback>
   );
 }
@@ -72,22 +77,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#fff',
-  
-    
-    
-    
+    backgroundColor: "#fff",
   },
   content: {
-    
-    flex:1,
+    flex: 1,
     padding: 40,
   },
   list: {
-    flex:1,
+    flex: 1,
     marginTop: 20,
   },
-
-
-
 });
