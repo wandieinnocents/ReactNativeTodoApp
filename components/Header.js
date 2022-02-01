@@ -1,5 +1,6 @@
 import React , { useState }  from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Icon from 'react-native-ionicons'
 
 export default function Header(){
 return(
