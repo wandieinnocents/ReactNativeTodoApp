@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList, Alert ,TouchableWithoutFeedback, Keyboard} from "react-native";
+import { ImageBackground, StyleSheet, Text, View, FlatList, Alert ,TouchableWithoutFeedback, Keyboard} from "react-native";
 import { YellowBox } from "react-native-web";
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
@@ -35,6 +35,8 @@ export default function App() {
     }
   };
 
+
+
   return (
 
    
@@ -47,7 +49,7 @@ export default function App() {
       console.log("Keyboard dismissed");
     }}>
     <View style={styles.container}>
-  
+       
       <Header />
       <View style={styles.content}>
         <AddTodo submitHandler={submitHandler} />
@@ -61,6 +63,7 @@ export default function App() {
           />
         </View>
       </View>
+      
     </View>
     </TouchableWithoutFeedback>
   );
@@ -69,7 +72,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor:'#fff'
+    
     
     
   },
@@ -82,4 +86,7 @@ const styles = StyleSheet.create({
     flex:1,
     marginTop: 20,
   },
+
+
+
 });
