@@ -19,6 +19,8 @@ header:{
     backgroundColor:'coral',
     borderBottomLeftRadius:60,
     borderBottomRightRadius:60,
+    
+    
 },
 title: {
     textAlign:'center',
