@@ -19,6 +19,7 @@ header:{
     backgroundColor:'#9a42bd',
     borderBottomLeftRadius:200,
     borderBottomRightRadius:200,
+    
 
     
 },
