@@ -16,10 +16,10 @@ const styles = StyleSheet.create({
 header:{
     height:80,
     paddingTop: 38,
-    backgroundColor:'coral',
-    borderBottomLeftRadius:60,
-    borderBottomRightRadius:60,
-    
+    backgroundColor:'#9a42bd',
+    borderBottomLeftRadius:200,
+    borderBottomRightRadius:200,
+
     
 },
 title: {

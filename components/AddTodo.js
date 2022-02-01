@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 
    
     icon:{
-        backgroundColor:'coral',
+        backgroundColor:'#35ca66',
         padding:10,
         textAlign:'center',
         color:'#fff',
