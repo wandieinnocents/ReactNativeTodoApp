@@ -5,6 +5,7 @@ import { YellowBox } from "react-native-web";
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
 import AddTodo from "./components/AddTodo";
+import Sandbox from "./components/Sandbox";
 
 export default function App() {
   // data
@@ -35,15 +36,20 @@ export default function App() {
   };
 
   return (
+
+   
+   
+    //  <Sandbox />
+    
+     
     <TouchableWithoutFeedback onPress={() => {
       Keyboard.dismiss();
       console.log("Keyboard dismissed");
     }}>
     <View style={styles.container}>
-      {/* Header */}
+  
       <Header />
       <View style={styles.content}>
-        {/* form */}
         <AddTodo submitHandler={submitHandler} />
 
         <View style={styles.list}>
@@ -66,9 +72,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   content: {
+    
+    flex:1,
     padding: 40,
   },
   list: {
+    flex:1,
     marginTop: 20,
   },
 });

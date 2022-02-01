@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Header(){
 return(
     <View style={ styles.header }>
-        <Text style={ styles.title }> Todos</Text>
+        <Text style={ styles.title }> Today's Work</Text>
     </View>
 );
 
