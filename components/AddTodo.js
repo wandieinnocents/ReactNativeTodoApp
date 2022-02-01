@@ -1,5 +1,8 @@
 import React , { useState }  from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import IonIcon from 'react-native-vector-icons/Ionicons';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function AddTodo({submitHandler}){
 
@@ -9,6 +12,7 @@ export default function AddTodo({submitHandler}){
     }
     return(
      <View>
+
          <TextInput 
          style={styles.input}
          placeholder='Click to Add Task...'
@@ -16,14 +20,19 @@ export default function AddTodo({submitHandler}){
          onChangeText={changeHandler}
         />
 
-     <Button  
-     style={ styles.addTodoButton }
-     onPress={() => submitHandler(text)}
-     title='Add Task'
-     color='coral'
-     
+        {/* Add task button  */}
+<View>
 
-     />
+{/* icon with button */}
+<IonIcon name="md-add-circle" onPress={() => submitHandler(text)}  size={20} style={styles.icon}>
+   <Text style={styles.text}>Add Task</Text>
+</IonIcon>
+
+     </View>
+
+
+
+
      </View>
     );
 };
@@ -40,7 +49,15 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ddd'
     },
 
-    addTodoButton: {
-        borderRadius: 90,
+   
+    icon:{
+        backgroundColor:'coral',
+        padding:10,
+        textAlign:'center',
+        color:'#fff',
+        borderRadius:15,
+        
+
+
     }
     });

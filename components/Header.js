@@ -5,7 +5,7 @@ import Icon from 'react-native-ionicons'
 export default function Header(){
 return(
     <View style={ styles.header }>
-        <Text style={ styles.title }> Today's Work</Text>
+        <Text style={ styles.title }> Today's Tasks</Text>
     </View>
 );
 
